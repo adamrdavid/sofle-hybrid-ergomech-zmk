@@ -45,11 +45,13 @@
 &kp TAB               &kp Q         &kp W             &kp E             &kp R      &kp T      &kp Y      &kp U      &kp I              &kp O              &kp P          &kp BSLH
 &mt LEFT_CONTROL ESC  &kp A         &kp S             &kp D             &kp F      &kp G      &kp H      &kp J      &kp K              &kp L              &kp SEMI       &kp SQT
 &mt LSHFT LPAR        &kp Z         &kp X             &kp C             &kp V      &kp B      &kp N      &kp M      &kp COMMA          &kp DOT            &kp FSLH       &mt RIGHT_SHIFT RPAR
-&kp C_MUTE            &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LEFT_COMMAND  &mo LOWER  &kp SPACE  &kp ENTER  &mo RAISE  &kp RIGHT_COMMAND  &kp RIGHT_COMMAND  &kp RIGHT_ALT
+&kp PAGE_DOWN         &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LEFT_COMMAND  &mo LOWER  &kp SPACE  &kp ENTER  &mo RAISE  &kp RIGHT_COMMAND  &kp RIGHT_COMMAND  &kp RIGHT_ALT
                                                                                               &kp ENTER  &kp RIGHT  &kp UP_ARROW       &kp LEFT           &kp DOWN
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_DN &inc_dec_kp PG_UP PG_UP>;
+            sensor-bindings =
+                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>,
+                <&inc_dec_kp PG_UP PG_UP>;
         };
 
         lower_layer {
@@ -90,7 +92,7 @@
 &trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans        &kp PG_UP  &trans    &kp UP    &trans     &kp N0   &trans
 &trans      &kp LALT      &kp LCTRL     &kp LSHFT     &trans        &kp CLCK      &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &kp BSPC
 &trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans     &trans    &trans    &trans     &trans   &trans
-&trans      &trans        &trans        &trans        &trans        &trans        &trans     &trans    &trans    &trans     &trans
+&kp C_MUTE  &trans        &trans        &trans        &trans        &trans        &trans     &trans    &trans    &trans     &trans
                                                                                   &kp A      &kp B     &kp C     &kp D      &kp E
             >;
 
