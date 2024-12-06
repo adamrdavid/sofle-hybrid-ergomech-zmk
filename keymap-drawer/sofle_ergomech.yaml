@@ -83,7 +83,7 @@ layers:
   - '3'
   - '4'
   - '{'
-  - '}'
+  - '*'
   - '4'
   - '5'
   - '6'
@@ -100,14 +100,14 @@ layers:
   - '2'
   - '3'
   - )
-  - '|'
+  - ENTER
   - {t: ▽, type: trans}
   - '='
   - '-'
   - +
   - '{'
+  - '{'
   - '}'
-  - '['
   - '0'
   - '0'
   - ':'
@@ -124,11 +124,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - A
-  - B
-  - C
-  - D
-  - E
+  - ''
+  - RIGHT
+  - UP ARROW
+  - LEFT
+  - DOWN
   raise:
   - BT CLR
   - {t: BT, h: '0'}
