@@ -19,6 +19,15 @@
 / {
     // Activate ADJUST layer by pressing raise and lower
 
+    behaviors {
+        scroll_encoder: scroll_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            tap-ms = <30>;
+        };
+    };
+
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
@@ -62,9 +71,9 @@
                                                                                                   &mkp MCLK  &kp RIGHT  &kp UP_ARROW           &kp LEFT  &kp DOWN
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>,
-                <&inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&scroll_encoder>;
+                //<&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>,
+                //<&inc_dec_kp PG_DN PG_UP>;
 
             // TODO: update this when ZMK supports scroll bindings
             // sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP &inc_dec_kp PG_DN PG_UP>;
