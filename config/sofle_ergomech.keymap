@@ -29,14 +29,14 @@
     };
 
     macros {
-        pastzoomlink: pastzoomlink {
+        pastezoomlink: pastezoomlink {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp L &kp A &kp T &kp T &kp I &kp C &kp E &kp H &kp Q &kp DOT &kp Z &kp O &kp O &kp M &kp DOT &kp U &kp S &kp FSLH &kp J &kp FSLH &kp N9 &kp N4 &kp N3 &kp N0 &kp N8 &kp N2 &kp N8 &kp N1 &kp N7 &kp N5 &kp N7 &kp QMARK &kp P &kp W &kp D &kp EQUAL &kp O &kp P &kp I &kp LS(N) &kp N &kp N4 &kp F &kp LS(J) &kp K &kp LS(H) &kp X &kp LS(A) &kp P &kp T &kp H &kp LS(T) &kp H &kp N &kp LS(O) &kp N6 &kp LS(F) &kp Y &kp A &kp G &kp N &kp LS(G) &kp K &kp LS(F) &kp LS(U) &kp G &kp DOT &kp N1>,
-                <&macro_press>;
+                <&none &kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp L &kp A &kp T &kp T &kp I &kp C &kp E &kp H &kp Q &kp DOT &kp Z &kp O &kp O &kp M &kp DOT &kp U &kp S &kp FSLH &kp J &kp FSLH &kp N9 &kp N4 &kp N3 &kp N0 &kp N8 &kp N2 &kp N8 &kp N1 &kp N7 &kp N5 &kp N7 &kp QMARK &kp P &kp W &kp D &kp EQUAL &kp O &kp P &kp I &kp LS(N) &kp N &kp N4 &kp F &kp LS(J) &kp K &kp LS(H) &kp X &kp LS(A) &kp P &kp T &kp H &kp LS(T) &kp H &kp N &kp LS(O) &kp N6 &kp LS(F) &kp Y &kp A &kp G &kp N &kp LS(G) &kp K &kp LS(F) &kp LS(U) &kp G &kp DOT &kp N1>,
+                <&macro_release>;
 
-            label = "PASTZOOMLINK";
+            label = "PASTEZOOMLINK";
         };
     };
 
