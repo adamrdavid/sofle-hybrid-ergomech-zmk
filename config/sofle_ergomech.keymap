@@ -59,9 +59,9 @@
                                                                                                   &mkp MCLK  &kp RIGHT  &kp UP_ARROW           &kp LEFT       &kp DOWN
             >;
 
-            // sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP &inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
+            // TODO: update this when ZMK supports scroll bindings
+            // sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP &inc_dec_kp PG_DN PG_UP>;
         };
 
         lower_layer {
@@ -84,7 +84,8 @@
                                                                                   &mkp LCLK          &kp LC(RIGHT_BRACKET)  &kp PAGE_UP  &kp LC(LEFT_BRACKET)  &kp PAGE_DOWN
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            // sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
         };
 
         raise_layer {
@@ -106,7 +107,7 @@
                                                                                      &trans     &trans    &trans  &trans     &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
         };
 
         adjust_layer {
