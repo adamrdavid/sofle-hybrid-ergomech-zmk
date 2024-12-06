@@ -57,7 +57,7 @@ layers:
   - ENTER
   - raise
   - Ctl+ ]
-  - RIGHT COMMAND
+  - '&pastzoomlink'
   - LOCK
   - '&mkp MCLK'
   - RIGHT
