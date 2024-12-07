@@ -17,6 +17,28 @@
 #define RAISE 2
 #define ADJUST 3
 
+
+#define U_MOUSE_MOVE_MAX 3000
+#define U_MOUSE_MOVE_DELAY 0
+#define U_MOUSE_MOVE_EXPONENT 1
+#define U_MOUSE_MOVE_TIME 750
+
+#define U_MOUSE_SCROLL_MAX 100
+#define U_MOUSE_SCROLL_DELAY 0
+#define U_MOUSE_SCROLL_EXPONENT 1
+#define U_MOUSE_SCROLL_TIME 0
+
+&mmv {
+    delay-ms = <U_MOUSE_MOVE_DELAY>;
+    acceleration-exponent = <U_MOUSE_MOVE_EXPONENT>;
+    time-to-max-speed-ms = <U_MOUSE_MOVE_TIME>;
+};
+
+&mwh {
+    delay-ms = <U_MOUSE_SCROLL_DELAY>;
+    acceleration-exponent = <U_MOUSE_SCROLL_EXPONENT>;
+    time-to-max-speed-ms = <U_MOUSE_SCROLL_TIME>;
+};
 / {
     // Activate ADJUST layer by pressing raise and lower
 
@@ -27,6 +49,19 @@
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
             tap-ms = <20>;
         };
+        inc_dec_mwh: behavior_sensor_rotate_mouse_wheel {
+			compatible = "zmk,behavior-sensor-rotate-var";
+			label = "ENC_MOUSE_WHEEL";
+			#sensor-binding-cells = <2>;
+         	bindings = <&mwh>, <&mwh>;
+		};
+
+		inc_dec_mmv: behavior_sensor_rotate_mouse_movement {
+			compatible = "zmk,behavior-sensor-rotate-var";
+			label = "ENC_MOUSE_MOVEMENT";
+			#sensor-binding-cells = <2>;
+         	bindings = <&mmv>, <&mmv>;
+		};
     };
 
     conditional_layers {
@@ -72,7 +107,8 @@
                                                                                                   &mkp MCLK  &kp RIGHT  &kp UP_ARROW           &kp LEFT  &kp DOWN
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_mwh MOVE_Y(-U_MOUSE_SCROLL_MAX) MOVE_Y(U_MOUSE_SCROLL_MAX) &inc_dec_mwh MOVE_X(-U_MOUSE_SCROLL_MAX) MOVE_X(U_MOUSE_SCROLL_MAX)>;
+            // <&scroll_encoder>;
                 //<&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>,
                 //<&inc_dec_kp PG_DN PG_UP>;
 
