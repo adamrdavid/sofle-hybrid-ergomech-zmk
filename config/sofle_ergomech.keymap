@@ -34,12 +34,12 @@
 #define SCROLL_LEFT 	MOVE_X(-U_MOUSE_SCROLL_MAX)
 #define SCROLL_RIGHT 	MOVE_X(U_MOUSE_SCROLL_MAX)
 
-#define MWH_U 	&mwh 	SCROLL_UP
-#define MWH_D 	&mwh 	SCROLL_DOWN
-#define MWH_L	&mwh 	SCROLL_LEFT
-#define MWH_R 	&mwh 	SCROLL_RIGHT
+#define MWH_U 	&msc 	SCROLL_UP
+#define MWH_D 	&msc 	SCROLL_DOWN
+#define MWH_L	&msc 	SCROLL_LEFT
+#define MWH_R 	&msc 	SCROLL_RIGHT
 
-&mwh {
+&msc {
     delay-ms = <U_MOUSE_SCROLL_DELAY>;
     acceleration-exponent = <U_MOUSE_SCROLL_EXPONENT>;
     time-to-max-speed-ms = <U_MOUSE_SCROLL_TIME>;
@@ -60,7 +60,7 @@
 			compatible = "zmk,behavior-sensor-rotate-var";
 			label = "ENC_MOUSE_WHEEL";
 			#sensor-binding-cells = <2>;
-         	bindings = <&mwh>, <&mwh>;
+         	bindings = <&msc>, <&msc>;
             tap-ms = <TAP_MS>;
 		};
     };
