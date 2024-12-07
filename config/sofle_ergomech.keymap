@@ -24,6 +24,11 @@
 #undef SCROLL_LEFT
 #undef SCROLL_RIGHT
 
+#define U_MOUSE_SCROLL_MAX 100
+#define U_MOUSE_SCROLL_DELAY 0
+#define U_MOUSE_SCROLL_EXPONENT 1
+#define U_MOUSE_SCROLL_TIME 0
+
 #define SCROLL_UP 		MOVE_Y(U_MOUSE_SCROLL_MAX)
 #define SCROLL_DOWN 	MOVE_Y(-U_MOUSE_SCROLL_MAX)
 #define SCROLL_LEFT 	MOVE_X(-U_MOUSE_SCROLL_MAX)
@@ -39,11 +44,6 @@
     acceleration-exponent = <U_MOUSE_SCROLL_EXPONENT>;
     time-to-max-speed-ms = <U_MOUSE_SCROLL_TIME>;
 };
-
-#define U_MOUSE_SCROLL_MAX 100
-#define U_MOUSE_SCROLL_DELAY 0
-#define U_MOUSE_SCROLL_EXPONENT 1
-#define U_MOUSE_SCROLL_TIME 0
 
 / {
     // Activate ADJUST layer by pressing raise and lower
@@ -108,7 +108,7 @@
                                                                                                   &mkp MCLK  &kp RIGHT  &kp UP_ARROW           &kp LEFT  &kp DOWN
             >;
 
-            sensor-bindings = <&inc_dec_mwh SCROLL_DOWN SCROLL_UP &inc_dec_mwh SCROLL_LEFT SCROLL_RIGHT>;
+            sensor-bindings = <&inc_dec_mwh SCROLL_DOWN SCROLL_UP &inc_dec_mwh SCROLL_RIGHT SCROLL_LEFT>;
             // <&scroll_encoder>;
                 //<&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>,
                 //<&inc_dec_kp PG_DN PG_UP>;
