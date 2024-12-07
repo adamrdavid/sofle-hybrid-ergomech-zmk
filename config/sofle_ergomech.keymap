@@ -17,6 +17,7 @@
 #define RAISE 2
 #define ADJUST 3
 
+#define TAP_MS 30
 
 #define U_MOUSE_MOVE_MAX 3000
 #define U_MOUSE_MOVE_DELAY 0
@@ -47,13 +48,14 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-            tap-ms = <20>;
+            tap-ms = <TAP_MS>;
         };
         inc_dec_mwh: behavior_sensor_rotate_mouse_wheel {
 			compatible = "zmk,behavior-sensor-rotate-var";
 			label = "ENC_MOUSE_WHEEL";
 			#sensor-binding-cells = <2>;
          	bindings = <&mwh>, <&mwh>;
+            tap-ms = <TAP_MS>;
 		};
 
 		inc_dec_mmv: behavior_sensor_rotate_mouse_movement {
@@ -61,6 +63,7 @@
 			label = "ENC_MOUSE_MOVEMENT";
 			#sensor-binding-cells = <2>;
          	bindings = <&mmv>, <&mmv>;
+            tap-ms = <TAP_MS>;
 		};
     };
 
