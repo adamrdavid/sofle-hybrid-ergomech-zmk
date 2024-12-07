@@ -17,7 +17,7 @@
 #define RAISE 2
 #define ADJUST 3
 
-#define TAP_MS 30
+#define TAP_MS 60
 
 #undef SCROLL_UP
 #undef SCROLL_DOWN
