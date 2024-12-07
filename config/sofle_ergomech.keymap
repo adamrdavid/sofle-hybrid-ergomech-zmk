@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
+#define ZMK_MOUSE_SCRL_VAL 140
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
@@ -117,7 +118,7 @@
             bindings = <
 &bt BT_CLR            &kp F11     &kp F12    &kp F13      &kp F14      &bt BT_SEL 4  &trans     &trans    &trans  &trans     &trans         &kp DEL
 &trans                &kp INS     &kp PSCRN  &kp K_CMENU  &trans       &trans        &kp PG_UP  &trans    &kp UP  &trans     &kp PAGE_UP    &trans
-&mt LEFT_CONTROL ESC  &kp LALT    &kp LCTRL  &kp LSHFT    &trans       &kp CLCK      &kp LEFT   &kp DOWN  &kp UP  &kp RIGHT  &kp PAGE_DOWN  &kp BSPC
+&mt LEFT_CONTROL ESC  &msc SCRL_UP    &msc SCRL__DOWN  &kp LSHFT    &trans       &kp CLCK      &kp LEFT   &kp DOWN  &kp UP  &kp RIGHT  &kp PAGE_DOWN  &kp BSPC
 &kp LEFT_SHIFT        &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE  &trans        &trans     &trans    &trans  &trans     &trans         &trans
 &kp C_MUTE            &trans      &trans     &trans       &trans       &trans        &trans     &trans    &trans  &trans     &trans
                                                                                      &trans     &trans    &trans  &trans     &trans
