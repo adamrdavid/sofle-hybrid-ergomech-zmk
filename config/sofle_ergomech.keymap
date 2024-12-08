@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#define ZMK_MOUSE_SCRL_VAL 512
+#define ZMK_MOUSE_SCRL_VAL 200
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
@@ -17,7 +17,7 @@
 #define RAISE 2
 #define ADJUST 3
 
-#define TAP_MS 60
+#define TAP_MS 20
 
 #undef SCROLL_UP
 #undef SCROLL_DOWN
@@ -50,9 +50,9 @@
 
     behaviors {
         scroll_encoder: scroll_encoder {
-            compatible = "zmk,behavior-sensor-rotate";
+            compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            bindings = <&msc SCROLL_DOWN>, <&msc SCROLL_UP>;
             tap-ms = <TAP_MS>;
         };
 
