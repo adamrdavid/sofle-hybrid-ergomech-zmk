@@ -19,6 +19,11 @@
 
 #define TAP_MS 20
 
+#undef MMV_UP
+#undef MMV_DOWN
+#undef MMV_LEFT
+#undef MMV_RIGHT
+
 #undef SCROLL_UP
 #undef SCROLL_DOWN
 #undef SCROLL_LEFT
@@ -26,13 +31,18 @@
 
 #define U_MOUSE_MOVE_MAX 3000
 #define U_MOUSE_MOVE_DELAY 0
-#define U_MOUSE_MOVE_EXPONENT 1
-#define U_MOUSE_MOVE_TIME 750
+#define U_MOUSE_MOVE_EXPONENT 2
+#define U_MOUSE_MOVE_TIME 200
 
 #define U_MOUSE_SCROLL_MAX 100
 #define U_MOUSE_SCROLL_DELAY 0
 #define U_MOUSE_SCROLL_EXPONENT 1
 #define U_MOUSE_SCROLL_TIME 0
+
+#define MMV_UP 	    MOVE_Y(U_MOUSE_MOVE_MAX)
+#define MMV_DOWN 	MOVE_Y(-U_MOUSE_MOVE_MAX)
+#define MMV_LEFT 	MOVE_X(-U_MOUSE_MOVE_MAX)
+#define MMV_RIGHT 	MOVE_X(U_MOUSE_MOVE_MAX)
 
 #define SCROLL_UP 		MOVE_Y(U_MOUSE_SCROLL_MAX)
 #define SCROLL_DOWN 	MOVE_Y(-U_MOUSE_SCROLL_MAX)
@@ -116,7 +126,7 @@
 &mt LEFT_CONTROL ESC  &kp A         &kp S             &kp D                 &kp F      &kp G      &kp H      &kp J            &kp K                  &kp L           &kp SEMI    &kp SQT
 &mt LSHFT LPAR        &kp Z         &kp X             &kp C                 &kp V      &kp B      &kp N      &kp M            &kp COMMA              &kp DOT         &kp FSLH    &mt RIGHT_SHIFT RPAR
 &kp PAGE_DOWN         &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LC(LEFT_BRACKET)  &mo LOWER  &kp SPACE  &kp ENTER  &mo RAISE        &kp LC(RIGHT_BRACKET)  &none           &kp K_LOCK
-                                                                                                  &mkp MCLK  &mmv MOVE_RIGHT  &mmv MOVE_UP           &mmv MOVE_LEFT  &mmv MOVE_DOWN
+                                                                                                  &mkp LCLK  &mmv MMV_RIGHT   &mmv MMV_UP            &mmv MMV_LEFT   &mmv MMV_DOWN
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -140,12 +150,12 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&kp GRAVE             &kp F1     &kp F2     &kp F3    &kp F4    &kp F5            &kp F6             &kp F7                 &kp F8       &kp F9                &kp F10        &kp BACKSPACE
-&kp GRAVE             &kp N1     &kp N2     &kp N3    &kp N4    &kp UNDERSCORE    &kp MINUS          &kp N7                 &kp N8       &kp N9                &kp PLUS       &kp MINUS
-&mt LEFT_CONTROL ESC  &kp EXCL   &kp AT     &kp HASH  &kp DLLR  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp N4                 &kp N5       &kp N6                &kp ASTERISK   &kp ENTER
-&kp LEFT_SHIFT        &kp EQUAL  &kp MINUS  &kp PLUS  &kp LBRC  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp N1                 &kp N2       &kp N3                &kp BSLH       &kp EQUAL
-&trans                &trans     &trans     &trans    &trans    &trans            &trans             &trans                 &kp N0       &kp N0                &kp PERIOD
-                                                                                  &mkp LCLK          &kp LC(RIGHT_BRACKET)  &kp PAGE_UP  &kp LC(LEFT_BRACKET)  &kp PAGE_DOWN
+&kp GRAVE             &kp F1     &kp F2     &kp F3    &kp F4    &kp F5            &kp F6             &kp F7    &kp F8       &kp F9   &kp F10        &kp BACKSPACE
+&kp GRAVE             &kp N1     &kp N2     &kp N3    &kp N4    &kp UNDERSCORE    &kp MINUS          &kp N7    &kp N8       &kp N9   &kp PLUS       &kp MINUS
+&mt LEFT_CONTROL ESC  &kp EXCL   &kp AT     &kp HASH  &kp DLLR  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp N4    &kp N5       &kp N6   &kp ASTERISK   &kp ENTER
+&kp LEFT_SHIFT        &kp EQUAL  &kp MINUS  &kp PLUS  &kp LBRC  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp N1    &kp N2       &kp N3   &kp SLASH       &kp EQUAL
+&trans                &trans     &trans     &trans    &trans    &trans            &trans             &trans    &kp N0       &kp N0   &kp PERIOD
+                                                                                  &mkp RCLK          &kp HOME  &kp PAGE_UP  &kp END  &kp PAGE_DOWN
             >;
 
             // sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
