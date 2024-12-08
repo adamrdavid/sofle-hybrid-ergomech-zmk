@@ -59,11 +59,11 @@ layers:
   - Ctl+ ]
   - ''
   - LOCK
-  - '&mkp MCLK'
-  - '&mmv MOVE_RIGHT'
-  - '&mmv MOVE_UP'
-  - '&mmv MOVE_LEFT'
-  - '&mmv MOVE_DOWN'
+  - '&mkp LCLK'
+  - '&mmv MOVE_X(3000)'
+  - '&mmv MOVE_Y(3000)'
+  - '&mmv MOVE_X(-3000)'
+  - '&mmv MOVE_Y(-3000)'
   lower:
   - '`'
   - F1
@@ -111,7 +111,7 @@ layers:
   - '1'
   - '2'
   - '3'
-  - \
+  - /
   - '='
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -124,10 +124,10 @@ layers:
   - '0'
   - '0'
   - .
-  - '&mkp LCLK'
-  - Ctl+ ]
+  - '&mkp RCLK'
+  - HOME
   - PAGE UP
-  - Ctl+ [
+  - END
   - PAGE DOWN
   raise:
   - BT CLR
