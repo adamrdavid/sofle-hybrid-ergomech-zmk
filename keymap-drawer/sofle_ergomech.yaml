@@ -60,10 +60,10 @@ layers:
   - ''
   - LOCK
   - '&mkp MCLK'
-  - RIGHT
-  - UP ARROW
-  - LEFT
-  - DOWN
+  - '&mmv MOVE_RIGHT'
+  - '&mmv MOVE_UP'
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
   lower:
   - '`'
   - F1
