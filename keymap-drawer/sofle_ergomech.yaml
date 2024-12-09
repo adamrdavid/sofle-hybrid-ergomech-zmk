@@ -57,8 +57,8 @@ layers:
   - ENTER
   - raise
   - Ctl+ ]
-  - ''
-  - LOCK
+  - '&pastezoomlink'
+  - AL SCREENSAVER
   - '&mkp LCLK'
   - '&mmv MOVE_X(3000)'
   - '&mmv MOVE_Y(-3000)'
