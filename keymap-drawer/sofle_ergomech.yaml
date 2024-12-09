@@ -61,9 +61,9 @@ layers:
   - LOCK
   - '&mkp LCLK'
   - '&mmv MOVE_X(3000)'
-  - '&mmv MOVE_Y(3000)'
-  - '&mmv MOVE_X(-3000)'
   - '&mmv MOVE_Y(-3000)'
+  - '&mmv MOVE_X(-3000)'
+  - '&mmv MOVE_Y(3000)'
   lower:
   - '`'
   - F1
@@ -125,10 +125,10 @@ layers:
   - '0'
   - .
   - '&mkp RCLK'
-  - HOME
-  - PAGE UP
   - END
   - PAGE DOWN
+  - HOME
+  - PAGE UP
   raise:
   - BT CLR
   - F11
