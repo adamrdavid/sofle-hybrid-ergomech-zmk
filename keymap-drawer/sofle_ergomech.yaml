@@ -37,6 +37,7 @@ layers:
   - ;
   - ''''
   - {t: (, h: LSHFT}
+  - /
   - Z
   - X
   - C
@@ -46,17 +47,16 @@ layers:
   - M
   - ','
   - .
-  - /
   - {t: ), h: RIGHT SHIFT}
   - PAGE DOWN
   - LEFT ALT
   - LEFT COMMAND
-  - Ctl+ [
+  - Ctl+[
   - lower
   - SPACE
   - ENTER
   - raise
-  - Ctl+ ]
+  - Ctl+]
   - '&pastezoomlink'
   - AL SCREENSAVER
   - '&mkp LCLK'
