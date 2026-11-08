@@ -1,3 +1,4 @@
+layout: {zmk_keyboard: sofle_ergomech}
 layers:
   default:
   - '`'
@@ -309,14 +310,14 @@ layers:
   - /
   - RIGHT SHIFT
   - MUTE
-  - '['
+  - lower
   - ']'
   - LEFT ALT
   - LEFT CONTROL
   - SPACE
   - ENTER
   - {t: gaming, h: toggle}
-  - {t: ▽, type: trans}
+  - raise
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
